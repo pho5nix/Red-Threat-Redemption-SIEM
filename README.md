@@ -3,54 +3,69 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
 
 ## Overview
-Red-Threat-Redemption is a comprehensive, open-source SIEM (Security Information and Event Management) stack - name inspired by epic *Red Dead Redemption 2*. Built on Debian 13 in a Proxmox VM, it integrates Elasticsearch & Kibana, Filebeat & Vector for logs parsing, Wazuh Manager for endpoints security, Zeek for network analysis on a secondary SPAN/Port-based NIC, pfSense logs ingestion for Suricata, pfBlockerNG and System logs.  
+Red-Threat-Redemption is an open-source SIEM (Security Information and Event Management) stack. The name is inspired by epic *Red Dead Redemption 2*. Built on Debian 13 in a Proxmox VM, it integrates Elasticsearch & Kibana, Filebeat & Vector for logs parsing, Wazuh Manager for endpoints security, Zeek for network analysis on a secondary SPAN/Port-based NIC, pfSense logs ingestion for Suricata, pfBlockerNG and syslog.  
 
-This repo provides step-by-step guides to deploy a high-performance SIEM for threat detection, log aggregation, and visualization. Optimized for 32GB RAM, 4 cores, and secure configurations—no plaintext passwords, minimal footprint, and best practices for efficiency.
+This repo provides step-by-step guides to deploy a high-performance SIEM for threat detection, log aggregation, and visualization. Optimized for 24GB RAM, 4 cores, and secure configurations. No plaintext passwords, minimal footprint, and best practices for efficiency.
 
 ### Key Features
 - **Minimal Debian 13 Base**: Hardened OS setup with LVM partitioning for flexible storage.  
-- **Elastic Stack with Vector**: Elasticsearch for storage/search, Kibana for visualization, Filebeatand Vector for logs parsing.  
+- **Elastic Stack with Vector**: Elasticsearch for storage/search, Kibana for visualization, Filebeat and Vector for logs parsing.  
 - **Wazuh Integration**: Security monitoring with alerts ingested into Elasticsearch.  
 - **Zeek Network Monitoring**: Passive analysis on PCI passthrough NIC.  
-- **pfSense Logs**: System syslog, Suricata and pfBlocker logs.  
+- **pfSense Logs**: System syslog, Suricata and pfBlocker logs ingestion.  
 - **Security Focus**: TLS, keystores for secrets, no swap, high file limits.  
 
 ## Prerequisites
-- Proxmox VE hypervisor with IOMMU enabled (This guide is focused on Proxmox VE but you can setup the infrastructure in any Hypervisor).  
+- Proxmox VE hypervisor with IOMMU enabled (This guide is focused on Proxmox VE but you can setup the infrastructure with any Hypervisor).  
 - Basic Linux knowledge.  
-- Hardware: 32GB RAM, 4 cores, 220GB storage, 2 NICs (the secondary NIC should be setup for SPAN/Mirror from your switch, mirroring the port you want to monitor traffic.
+- Hardware: 24GB RAM, 4 cores, 220GB storage, 2 NICs (the secondary NIC should be setup for SPAN/Mirror from your switch management, mirroring the port you want to monitor traffic.
 
 ## Installation Guides
 Follow these guides in sequence. Each is self-contained but builds on the previous.
 
 ### 1. Debian 13 Installation and Configuration
-[Debian Guide](./docs/01.%20Valentine%20%7C%20Debian%2013.md)
-- VM setup in Proxmox.  
+[Debian Guide](./docs/01.%20Valentine_Debian%2013.md)
+- VM setup on Proxmox VE.  
 - Minimal netinst install with LVM partitioning.  
 - Hardening and tuningg.
 
 ### 2. ELK Stack & Wazuh Setup
-[ELK & Wazuh Guide](./docs/elk-wazuh.md)  
+[ELK & Wazuh Guide](./docs/Cores_SIEM%20Stackmd)  
 - Install Elasticsearch, Kibana, Filebeat, Vector and Wazuh Manager.  
 - Secure configurations (TLS, keystores for passwords).  
 - Vector pipeline for Wazuh alerts.  
 - Kibana data views.
 
 ### 3. Zeek Integration (PCI Passthrough NIC)
-[Zeek Guide](./docs/zeek-integration.md)  
+[Zeek Guide](./docs/03.%20Dead-Eye_Zeek-Filebeat.md)  
 - Add and verify PCI NIC.  
 - Install and configure Zeek.
 - Vector pipeline for Zeek logs.  
 - Kibana data view for Zeek.
 
 ### 4. pfSense Logs Integration
-[pfSense Guide](./docs/pfsense-logs.md) 
+[pfSense Guide](./docs/04.%20Fence_pfSense-pfBlocker-Suricata.md) 
 - Install and configure Syslog-ng.
 - Configure system logs for Syslog-ng.
-- Configure Syslog-ng for pfBlocker.
 - Configure Syslog-ng for Suricata
+- Configure cron job for pfBlockerNG.
 - Vector pipelines for ingestion and parsing.  
-- Kibana data views for Suricata, pfSense syslog and pfBlocker.
+- Kibana data views for Suricata, pfSense syslog and pfBlockerNG.
+
+### 5. GeoIP Enrichment
+[GeoIP](.docs/05.%20Talisman_GeoIP%20Enrichment.md)
+- Integrate MaxMind and download GeoLite2-City.mmdb
+- Update Vector transforms and sinks
+- Add Elasticsearch Index Template
+
+### 6. Wazuh Agents & Endpoint enrollment
+[Wazuh Agents](./docs/06.%20Pinkertons_Wazuh%20Agents-Enrollment.md)
+- Manage agent and key for CLI
+- Create and assign groups
+- Agents installation guide for Windows & Linux
+
+### 7. Kibana Dashboards
+[Kibana](.docs/07.%20Trinkets_Kibana%20Dashboards.md)
 
 ## Usage
 1. Clone the repo:  

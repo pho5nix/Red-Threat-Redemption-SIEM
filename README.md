@@ -11,7 +11,7 @@ This repo provides step-by-step guides to deploy a high-performance SIEM for thr
 
 ![SOC_Overview](https://github.com/user-attachments/assets/e16773c0-078d-4849-8e6d-0469baa5f54d)
 
-###Threat Intelligence & Threat Hunting
+### Threat Intelligence & Threat Hunting
 
 ![Threat_Hunting](https://github.com/user-attachments/assets/92dfb330-f219-4a0a-a28b-9e6e3a8525b3)
 

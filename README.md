@@ -9,7 +9,7 @@ This repo provides step-by-step guides to deploy a high-performance SIEM for thr
 
 ### SOC Overview Dashboard
 
-![SOC_Overview](https://github.com/user-attachments/assets/e16773c0-078d-4849-8e6d-0469baa5f54d)
+![SOC_Overview](https://github.com/user-attachments/assets/fb4a7534-f895-4ae9-b2cf-73b08c8a2b60)
 
 ### Threat Intelligence & Threat Hunting
 
@@ -17,7 +17,7 @@ This repo provides step-by-step guides to deploy a high-performance SIEM for thr
 
 ## Wazuh Endpoint Security Dashboard
 
-![Wazuh_Endpoint_Security](https://github.com/user-attachments/assets/b90886f0-871b-49bc-aabc-00c0efdcf27b)
+![Wazuh_Endpoint_Security](https://github.com/user-attachments/assets/dbbac13a-843b-4197-aeb0-eb8e4981c876)
 
 
 ### Key Features

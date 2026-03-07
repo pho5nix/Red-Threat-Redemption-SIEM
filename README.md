@@ -7,18 +7,29 @@ Red-Threat-Redemption is an open-source SIEM (Security Information and Event Man
 
 This repo provides step-by-step guides to deploy a high-performance SIEM for threat detection, log aggregation, and visualization. Optimized for 24GB RAM, 4 cores, and secure configurations. No plaintext passwords, minimal footprint, and best practices for efficiency.
 
+---
+---
+
 ### SOC Overview Dashboard
 
 ![SOC_Overview](https://github.com/user-attachments/assets/fb4a7534-f895-4ae9-b2cf-73b08c8a2b60)
+
+---
+---
 
 ### Threat Intelligence & Threat Hunting
 
 ![Threat_Hunting](https://github.com/user-attachments/assets/92dfb330-f219-4a0a-a28b-9e6e3a8525b3)
 
+---
+---
+
 ## Wazuh Endpoint Security Dashboard
 
 ![Wazuh_Endpoint_Security](https://github.com/user-attachments/assets/dbbac13a-843b-4197-aeb0-eb8e4981c876)
 
+---
+---
 
 ### Key Features
 - **Minimal Debian 13 Base**: Hardened OS setup with LVM partitioning for flexible storage.  
@@ -84,10 +95,7 @@ Follow these guides in sequence. Each is self-contained but builds on the previo
 - Setup Wazuh Security Dashboard
 
 ## Usage
-1. Clone the repo:  
-   ```
-   git clone https://github.com/yourusername/red-threat-redemption.git
-   ```
+1. Clone the repo.
 2. Follow the guides sequentially.  
 3. Access Kibana (use elastic credentials).  
 4. Monitor dashboards in Kibana for Wazuh alerts, Zeek events, and pfSense logs.  

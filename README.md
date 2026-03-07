@@ -15,6 +15,10 @@ This repo provides step-by-step guides to deploy a high-performance SIEM for thr
 
 ![Threat_Hunting](https://github.com/user-attachments/assets/92dfb330-f219-4a0a-a28b-9e6e3a8525b3)
 
+## Wazuh Endpoint Security Dashboard
+
+![Wazuh_Endpoint_Security](https://github.com/user-attachments/assets/b90886f0-871b-49bc-aabc-00c0efdcf27b)
+
 
 ### Key Features
 - **Minimal Debian 13 Base**: Hardened OS setup with LVM partitioning for flexible storage.  
@@ -77,6 +81,7 @@ Follow these guides in sequence. Each is self-contained but builds on the previo
 [Kibana](./07.%20Trinkets_Kibana%20Dashboards.md)
 - Setup SOC Overview Dashboard
 - Setup Threat Hunting Dashboard
+- Setup Wazuh Security Dashboard
 
 ## Usage
 1. Clone the repo:  

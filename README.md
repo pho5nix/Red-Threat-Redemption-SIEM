@@ -7,6 +7,15 @@ Red-Threat-Redemption is an open-source SIEM (Security Information and Event Man
 
 This repo provides step-by-step guides to deploy a high-performance SIEM for threat detection, log aggregation, and visualization. Optimized for 24GB RAM, 4 cores, and secure configurations. No plaintext passwords, minimal footprint, and best practices for efficiency.
 
+### SOC Overview Dashboard
+
+![SOC_Overview](https://github.com/user-attachments/assets/e16773c0-078d-4849-8e6d-0469baa5f54d)
+
+###Threat Intelligence & Threat Hunting
+
+![Threat_Hunting](https://github.com/user-attachments/assets/92dfb330-f219-4a0a-a28b-9e6e3a8525b3)
+
+
 ### Key Features
 - **Minimal Debian 13 Base**: Hardened OS setup with LVM partitioning for flexible storage.  
 - **Elastic Stack with Vector**: Elasticsearch for storage/search, Kibana for visualization, Filebeat and Vector for logs parsing.  
@@ -66,6 +75,8 @@ Follow these guides in sequence. Each is self-contained but builds on the previo
 
 ### 7. Kibana Dashboards
 [Kibana](./07.%20Trinkets_Kibana%20Dashboards.md)
+- Setup SOC Overview Dashboard
+- Setup Threat Hunting Dashboard
 
 ## Usage
 1. Clone the repo:  

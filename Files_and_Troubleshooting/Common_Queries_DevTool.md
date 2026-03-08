@@ -32,7 +32,7 @@ delete _data_stream/logs-wazuh.alerts-default
 ```
 get /_mapping/field/destination.geo.location?pretty
 ```
-**Create template for geo-mapping (pfBlockerNG example)
+**Create template for geo-mapping (pfBlockerNG example)**
 ```
 GET _component_template/pfblockerng-mappings
  {

@@ -1,5 +1,9 @@
 # Red-Threat-Redemption SIEM
 
+[![Engine: Elasticsearch](https://img.shields.io/badge/Platform-Elasticsearch-red.svg)](https://www.elastic.co/)
+[![Endpoint Security: Wazuh](https://img.shields.io/badge/EndpointSecurity-Wazuh-blue.svg)](https://wazuh.com/)
+[![NSM: Zeek](https://img.shields.io/badge/NSM-Zeek-green.svg)](https://zeek.org/)
+[![IDS/IPS: Suricata](https://img.shields.io/badge/IDS-Suricata-orange.svg)](https://suricata.io/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)  
 
 ## Overview

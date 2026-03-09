@@ -60,11 +60,10 @@ Follow these guides in sequence. Each is self-contained but builds on the previo
 - Vector pipeline for Wazuh alerts.  
 - Kibana data views.
 
-### 3. Zeek Integration (PCI Passthrough NIC)
+### 3. Zeek Integration (Proxmox PCI Passthrough NIC)
 [Zeek Guide](03.%20Dead-Eye_Zeek-Filebeat.md)  
 - Add and verify PCI NIC.  
 - Install and configure Zeek.
-- Vector pipeline for Zeek logs.  
 - Kibana data view for Zeek.
 
 ### 4. pfSense Logs Integration
@@ -80,7 +79,7 @@ Follow these guides in sequence. Each is self-contained but builds on the previo
 [GeoIP](./05.%20Talisman_GeoIP%20Enrichment.md)
 - Integrate MaxMind and download GeoLite2-City.mmdb
 - Update Vector transforms and sinks
-- Add Elasticsearch Index Template
+- Add Elasticsearch Index Templates
 
 ### 6. Wazuh Agents & Endpoint enrollment
 [Wazuh Agents](./06.%20Pinkertons_Wazuh%20Agents-Enrollment.md)
@@ -97,12 +96,12 @@ Follow these guides in sequence. Each is self-contained but builds on the previo
 ## Usage
 1. Clone the repo.
 2. Follow the guides sequentially.  
-3. Access Kibana (use elastic credentials).  
+3. Access Kibana.
 4. Monitor dashboards in Kibana for Wazuh alerts, Zeek events, and pfSense logs.  
 5. Tune Vector configs in `/etc/vector/vector.yaml` for additional sources.
 
 ## Troubleshooting
-Common issues across guides:  
+Common issues when you customize it across guides:  
 - **Connection Failures**: Verify TLS certs and secrets.  
 - **Log Ingestion**: Check vector.yaml, inspect service logs for parse issues.
 - **Performance**: Monitor RAM; adjust ES heap if needed.
@@ -116,4 +115,3 @@ MIT License. See [LICENSE](./LICENSE) for details.
 - Thanks to Elastic, Wazuh, Vector, Zeek, and pfSense communities.  
 - Built for cybersecurity enthusiasts.
 
-Happy hunting threats!
